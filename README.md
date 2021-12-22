@@ -1,4 +1,3 @@
-# Fame_and_Fortune
 Fame & Fortune [RPG]
 
 Stats:
@@ -909,7 +908,3 @@ Cooked meat	Food	—	1x1	8	|Life stats	Kitchen
 Plant	Food	—	1x1	16	Life stats	Shop
 Stat-Band	Band	Wrist	1x1	1	Menus	Story
 Note	Read	—	1x1	1	Read	Loot, story
-
-
-Sent from my iPhone
-
