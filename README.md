@@ -1,2 +1,1 @@
-# Fame_and_Fortune
-RPG
+Fame and Fortune RPG
