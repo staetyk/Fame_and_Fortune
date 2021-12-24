@@ -3,11 +3,12 @@ import pygame, sys
 from pygame.constants import K_END, QUIT
 pygame.init()
 
-PINK = 0xFF4040
-BLACK = 0x000000
-BLUE = 0x0000FF
-
-screen = pygame.display.set_mode((1536, 801), pygame.RESIZABLE)
+scren = pygame.display.set_mode((0, 0), pygame.RESIZABLE)
+size = pygame.display.get_window_size()
+size = (size[0], size[1]-53)
+pygame.display.quit()
+pygame.display.init()
+screen = pygame.display.set_mode(size, pygame.RESIZABLE)
 
 while True:
     events = pygame.event.get()
