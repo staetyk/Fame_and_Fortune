@@ -1,4 +1,5 @@
 import pickle, os.path
+import math
 
 #default stats for a character
 stats = {
@@ -34,9 +35,9 @@ stats = {
 }
 
 
-#equation is lambda
+#equation is a lambda
 def change(stat: str, equation):
     global stats
     x = stats[stat]
-    y = ceil(equation(x))
+    y = math.ceil(equation(x))
     stats.update({stat:y})
