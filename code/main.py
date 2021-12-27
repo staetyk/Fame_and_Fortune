@@ -10,7 +10,7 @@ pygame.display.quit()
 pygame.display.init()
 screen = pygame.display.set_mode(size)
 
-favi = pygame.image.load("images/Favicon.png")
+favi = pygame.image.load("images\Favicon.png")
 pygame.display.set_icon(favi)
 pygame.display.set_caption("Fame & Fortune", "F&F")
 
@@ -32,7 +32,7 @@ def scale(img: pygame.Surface, width: int = None, hight: int = None) -> pygame.S
     return img
 
 screen.fill(0x171717)
-logo = pygame.image.load("images/LOGO.png")
+logo = pygame.image.load("images\LOGO.png")
 logo = scale(logo, width = size[0]-10)
 logo.set_colorkey((255,255,255))
 screen.blit(logo, (0,100))
