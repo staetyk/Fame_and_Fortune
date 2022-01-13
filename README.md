@@ -1,6 +1,6 @@
 # Fame and Fortune
 
-### You want to be big, so when you hear that a mad scientist-king named Porr Ta'al made portals in towers, you jump at the oppertunity. Fight your way through the monsters in the Dead, Future, and Myth Towers, in this intricate RPG! Learn all of the 26 stats, 28 effects, and much, much more on your journey.
+### You want to be big, so when you hear that a mad scientist-king named Porr Ta'al made portals in towers, you jump at the oppertunity. Fight your way through the monsters in the Dead, Future, and Myth Towers, in this intricate RPG! Learn all of the 26 stats, 29 effects, and much, much more on your journey.
 
 ---
 ## Credits:
