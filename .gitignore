@@ -131,4 +131,4 @@ dmypy.json
 .pyre/
 
 # Not for the public
-/cheat-sheet.txt
+cheat-sheet.*
