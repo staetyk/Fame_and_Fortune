@@ -12,7 +12,7 @@
 ### Music by:
 * *staetyk* **AKA** *Bach Davis*
 ### Art by:
-* *LordYharim* <!-- **AKA** *Earny Arnt-Schemmel* --> 
+* *LordYharim* **AKA** *Earny Arnt-Schemmel*
 ### Logo and favicon by:
 * *staetyk* **AKA** *Bach Davis*
 ### Story by:
