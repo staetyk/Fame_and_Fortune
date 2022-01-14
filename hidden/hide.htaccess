@@ -1,0 +1,4 @@
+AuthTye Basic
+AuthName "Not for the public"
+AuthUserFile /Fame_and_Fortune/hidden/password.htpasswd
+Require valid-user
