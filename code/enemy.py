@@ -23,3 +23,5 @@ class enemy:
         self.texture = pygame.transform.scale(texture, (100,100))
         self.dialogue = dialogue
         self.alive = True
+
+        self.event = pygame.event.custom_type()

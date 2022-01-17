@@ -1,8 +1,8 @@
+from re import A
 import pygame, stats, enemy, random
 
 
 PlayerAttk = pygame.event.custom_type()
-EnemyAttk = pygame.event.custom_type()
 
 def chance(percent: float) -> bool:
     x = random.randrange(0.01, 1.01, 0.01)
@@ -29,3 +29,14 @@ def attack(offense: dict, defense: dict):
     # give effects
 
     return (offense, defense)
+
+
+def play(enemies: list[enemy.enemy]):
+    for x in enemies:
+        pygame.time.set_timer(x.event, x.stats["Attack Speed"]*1000)
+    pygame.time.set_timer(PlayerAttk, stats.stats["Attack Speed"]*1000)
+
+    target = 0
+    while len(enemies) > 0 and stats.stats["HP"] > 0:
+        # ...
+        pass

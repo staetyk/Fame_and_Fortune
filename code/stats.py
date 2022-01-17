@@ -1,7 +1,7 @@
 import pickle, os.path
 import math
 
-#default stats for a character
+#default stats for player
 stats = {
     "Max HP" : 10,
     "HP" : 10,
@@ -10,7 +10,7 @@ stats = {
     "SP" : 0,
     "SP Regen" : 0,
     "Damage" : 1,
-    "Attack Speed" : 1,
+    "Attack Speed" : 2,
     "Armor" : 0.1,
     "Critical Hit" : 0.25,
     "Combo" : 0,
@@ -35,7 +35,6 @@ stats = {
 }
 
 
-#equation is a lambda
 def change(stat: str, equation):
     global stats
     x = stats[stat]
