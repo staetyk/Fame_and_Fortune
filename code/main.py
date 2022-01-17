@@ -37,6 +37,7 @@ area = "logo"
 area_que = ["main", "loading"]
 
 pygame.time.set_timer(NewArea, 9600, 1)
+boom = 0
 
 music = pygame.mixer.Sound("music/theme.wav")
 music.set_volume(0.75)
@@ -71,4 +72,19 @@ while True:
         pause = True
 
         screen.fill(0x000011)
+
+        if boom == 0:
+            MenuBoom = pygame.event.custom_type()
+            pygame.time.set_timer(MenuBoom, 3000, 1)
+            boom += 1
+        
+        elif boom == 1:
+            if pygame.event.peek(MenuBoom):
+                boom += 1
+                pygame.event.clear(MenuBoom)
+                del MenuBoom
+        
+        if boom == 2:
+            ph = pygame.draw.rect(screen)
+
         pygame.display.flip()
