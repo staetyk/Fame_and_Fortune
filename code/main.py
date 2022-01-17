@@ -8,35 +8,67 @@ pygame.display.init()
 screen = pygame.display.set_mode((monitor.current_w, monitor.current_h -50), RESIZABLE)
 size = pygame.display.get_surface().get_size()
 
-favi = pygame.image.load("images/Favicon.png")
+favi = pygame.image.load("images//Favicon.png")
 pygame.display.set_icon(favi)
 pygame.display.set_caption("Fame & Fortune", "F&F")
 
 def end():
-    events = pygame.event.get()
-    for event in events:
-        if event.type == pygame.QUIT:
-            pygame.display.quit()
-            pygame.quit()
-            quit
+    if pygame.event.peek(QUIT):
+        pygame.display.quit()
+        pygame.quit()
+        quit
 
-def scale(img: pygame.Surface, width: int = None, hight: int = None) -> pygame.Surface:
+def scale(img: pygame.Surface, width: int = None, height: int = None) -> pygame.Surface:
     size = img.get_size()
     ratio = size[0] // size[1]
     if width == None:
-        width = hight * ratio
-    elif hight == None:
-        hight = width // ratio
-    img = pygame.transform.scale(img, (width, hight))
+        width = height * ratio
+    elif height == None:
+        height = width // ratio
+    img = pygame.transform.scale(img, (width, height))
     return img
 
-screen.fill(0x171717)
-logo = pygame.image.load("images/LOGO.png")
-logo = scale(logo, width = size[0]-10)
-logo.set_colorkey((255,255,255))
-screen.blit(logo, (0,100))
-pygame.display.flip()
+
+NewArea = pygame.event.custom_type()
 
 
+area = "logo"
+area_que = ["main", "loading"]
+
+pygame.time.set_timer(NewArea, 9600, 1)
+
+music = pygame.mixer.Sound("music/theme.wav")
+music.set_volume(0.75)
+music.play(-1)
 while True:
     end()
+
+    if pygame.event.peek(NewArea):
+        if pause:
+            pygame.mixer.pause()
+        area = area_que[0]
+        area_que = area_que[1:]
+        pygame.event.clear(NewArea)
+
+
+    if area == "logo":
+        music = pygame.mixer.Sound("music/theme.wav")
+        pygame.mixer.unpause()
+        pause = False
+
+        screen.fill(0x171717)
+        logo = pygame.image.load("images//LOGO.png")
+        logo = scale(logo, width = size[0]-10)
+        logo.set_colorkey((255,255,255))
+        screen.blit(logo, (0,100))
+        pygame.display.flip()
+    
+
+    elif area == "main":
+        music = pygame.mixer.Sound("music/theme.wav")
+        pygame.mixer.unpause()
+        pause = True
+
+        screen.fill(0x171717)
+        pygame.display.flip()
+        print ("hi")
