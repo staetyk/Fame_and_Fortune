@@ -71,8 +71,4 @@ while True:
         pause = True
 
         screen.fill(0x000011)
-        logo = pygame.image.load("images//LOGO.png")
-        logo = scale(logo, height = size[1]-600)
-        logo.set_colorkey((255,255,255))
-        screen.blit(logo, (0,100))
         pygame.display.flip()
