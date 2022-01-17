@@ -71,4 +71,3 @@ while True:
 
         screen.fill(0x171717)
         pygame.display.flip()
-        print ("hi")
