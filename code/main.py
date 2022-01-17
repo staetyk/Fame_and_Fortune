@@ -9,6 +9,7 @@ screen = pygame.display.set_mode((monitor.current_w, monitor.current_h -50), RES
 size = pygame.display.get_surface().get_size()
 
 favi = pygame.image.load("images//Favicon.png")
+favi.set_colorkey((255,255,255))
 pygame.display.set_icon(favi)
 pygame.display.set_caption("Fame & Fortune", "F&F")
 
@@ -69,5 +70,5 @@ while True:
         pygame.mixer.unpause()
         pause = True
 
-        screen.fill(0x171717)
+        screen.fill(0x000011)
         pygame.display.flip()
